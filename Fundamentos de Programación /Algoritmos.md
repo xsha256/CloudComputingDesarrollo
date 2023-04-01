@@ -263,6 +263,7 @@ Donde π (pi) es una constante matemática aproximadamente igual a 3.14159.
 `radio area` `perímetro pi = 3.14159` `resultado = 0`
 
 **Proceso:**
+`radio` <- lee()
 
 validar si el `radio` es un numero
 
@@ -309,7 +310,7 @@ Dada una lista de números enteros, determina cuál es el mayor y cuál es el me
 
 + **Paso 1:** Definir el problema
 
-a partir de una lista de números tenemos que determinar cuál es el mayor y cuál es el menor
+a partir de una lista de números tenemos que determinar cuando es  mayor y cuando es menor
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -361,7 +362,9 @@ Crea un algoritmo que convierta grados Celsius a Fahrenheit
 
 Para convertir grados Celsius a Fahrenheit, se utiliza la siguiente fórmula matemática:
 
-$$°F = (°C * 1.8) + 32 $$
+$$
+°F = (°C * 1.8) + 32 
+$$
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -408,7 +411,7 @@ Saber si un numero es par o impar.
 
 **Entrada**:
 
-`numero resultado`
+`numero` `resultado`
 
 **Proceso:**
 
@@ -416,20 +419,20 @@ Dividimos el `numero` entre 2:
 
 Si el resto de la división = 0:
 
-resultado ← Es par
+`resultado` ← Es par
 
 Sino:
 
-resultado ← es impar
+`resultado` ← es impar
 
 **Salida**:
 
-Escribe(resultado)
+Escribe(`resultado`)
 
 + **Paso 3**: Escribe el pseudocódigo
 
 ```cpp
-Algoritmo rutaAvion
+Algoritmo parOImpar
   # Entrada
     numero <- leer()
     resultado <- 0
@@ -576,7 +579,7 @@ Dada una lista de nombres, crea un algoritmo que ordene la lista alfabéticament
 
 + **Paso 1:** Definir el problema
 
-Hay que ordenar una lista de nombres alfabéticamente
+El problema consiste en ordenar alfabéticamente una lista de nombres, es decir, crear un algoritmo que organice los elementos de la lista en orden ascendente o descendente según su posición en el alfabeto.
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -598,12 +601,12 @@ Escribir(`nombresOrdenados`)
 
 ```cpp
 Algoritmo listaOrdenadaAlfabéticamente
-  # Entrada
+#Entrada
     nombresDesordenados <- leer()
     nombresOrdenados <- " "
     nombrePrimero <- " "
 
-  # Proceso
+#Proceso
     Mientras nombresDesordenados no esté vacía repetir:
        nombrePrimero = lista_nombres[0]
        Para cada nombre en nombrePrimero hacer: 
@@ -624,7 +627,10 @@ Crea un algoritmo que calcule el factorial de un número entero.
 
 + **Paso 1:** Definir el problema
 
-Calcular el factorial de un número entero
+El factorial de un número se calcula multiplicando ese número por todos los números enteros positivos menores que él. Por ejemplo, el factorial de 5 se calcula así: 
+          $$
+          5! = 5 x 4 x 3 x 2 x 1 = 120 
+          $$
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -666,7 +672,9 @@ Dado un número entero, crea un algoritmo que determine si es primo o no
 
 + **Paso 1:** Definir el problema
 
-determinar si un numero es primo o no
+    determinar si un numero es primo o no. El número primo es un número entero mayor que 1 que solo es divisible exactamente por 1 y por sí mismo. 
+
+    Utilizamos la raíz cuadrada porque si un número no es primo, necesariamente tiene un divisor que es menor o igual que su raíz cuadrada. Si no hay ningún divisor en el rango de 2 a la raíz cuadrada del número, no habrá ningún divisor en el rango de la raíz cuadrada del número a su valor máximo.
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -722,11 +730,15 @@ Calcular el área y volumen de un cubo dado su lado.
 
 El área de un cubo se puede calcular utilizando la fórmula:
 
-$$area = 6 x (lado)^2$$
+$$
+area = 6 x (lado)^2
+$$
 
 El volumen de un cubo se puede calcular utilizando la fórmula:
 
-$$Volumen = (lado)^3$$
+$$
+Volumen = (lado)^3
+$$
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -736,7 +748,7 @@ $$Volumen = (lado)^3$$
 
 **Proceso:**
 
-para calcular el `area` del cubo, tenemos que multiplicar el `area` por el numero de caras que tiene
+para calcular el `area` del cubo, tenemos que multiplicar el `lado` por el numero de caras que tiene el cubo, 6,  elevado al cuadrado 
 
 Para calcular el `volumen` del cubo, tenemos que elevar al cubo la medida del `lado`
 
@@ -747,7 +759,7 @@ escribir(`area`, `volumen`)
 + **Paso 3**: Escribe el pseudocódigo
 
 ```cpp
-Algoritmo rutaAvion
+Algoritmo areaVolumenCubo
   # Entrada
     lado <- leer()
     area <- 0
@@ -770,7 +782,7 @@ Dada una lista de números enteros, crea un algoritmo que calcule la suma de tod
 
 + **Paso 1:** Definir el problema
 
-Hay que sumar los números pares de una lista
+Hay que sumar los números pares de una lista. Un número es par si es divisible exactamente por 2, lo que significa que su resto es 0 al dividirlo por 2.
 
 + **Paso 2:** Poner la entrada, el proceso y la salida
 
@@ -853,8 +865,14 @@ Fin algoritmo
 Dada una lista de números enteros, crea un algoritmo que calcule la media de la lista.
 
 + **Paso 1:** Definir el problema
-   + Hay que calcular la media de una lista de números
-   + **Paso 2:** Poner la entrada, el proceso y la salida
+   Hay que calcular la media de una lista de números.
+  la media se calcula de la siguiente forma:
+
+  $$
+  media = suma de todos los números en la lista / cantidad de números en la lista 
+  $$
+
++ **Paso 2:** Poner la entrada, el proceso y la salida
 
 **Entrada**:
 
@@ -916,8 +934,7 @@ Hay que generar un número aleatorio entre 1 y 100, y pedir al usuario que adivi
 - Si el número ingresado por el usuario es igual al número aleatorio, imprimimos ¡Felicitaciones! Adivinaste el número.
 
 **Salida**:
-
-Salir del bucle
+  Escribir("¡Felicitaciones! Adivinaste el número.")
 
 + **Paso 3**: Escribe el pseudocódigo
 
@@ -941,6 +958,7 @@ Algoritmo AdivinarElNumero
         Fin Mientras
 
   #Salida
+      Escribir("¡Felicitaciones! Adivinaste el número.")
 
 Fin algoritmo
 ```
@@ -1026,7 +1044,7 @@ Escribir(`listaSinDuplicados`)
 + **Paso 3**: Escribe el pseudocódigo
 
 ```cpp
-Algoritmo rutaAvion
+Algoritmo eliminarNumerosDuplicados
   # Entrada
      listaNumeros <- leer()
      listaSinDuplicados <- []
